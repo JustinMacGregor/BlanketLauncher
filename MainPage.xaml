@@ -9,21 +9,23 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <NavigationView
+        <NavigationView Name="NavView"
                         PaneDisplayMode="LeftCompact" 
                         IsBackButtonVisible="Collapsed" 
                         IsBackEnabled="False" 
                         IsPaneOpen="False"
-                        IsPaneToggleButtonVisible="False">
-            
+                        IsPaneToggleButtonVisible="False"
+                        ItemInvoked="NavView_ItemInvoked">
+
             <NavigationView.MenuItems>
+
                 <NavigationViewItem Tag="store">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE719;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                
-                <NavigationViewItem Tag="games">
+
+                <NavigationViewItem Tag="games" IsSelected="True">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                     </NavigationViewItem.Icon>
@@ -34,11 +36,16 @@
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E2;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                
+
             </NavigationView.MenuItems>
-            
-            
-            
+
+            <Frame x:Name="ContentFrame" Margin="24">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
             
         </NavigationView>
         
