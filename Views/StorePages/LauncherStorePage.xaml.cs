@@ -41,12 +41,12 @@ namespace Blanket_Launcher.Views.StorePages
                     webView.Source = new System.Uri("https://www.xbox.com/en-CA/games?xr=shellnav");
                     break;
 
-                case "playsationstore":
+                case "playstationstore":
                     webView.Source = new System.Uri("https://store.playstation.com/en-ca/home/games");
                     break;
 
                 default:
-                    webView.Source = new System.Uri("");
+                    webView.Source = new System.Uri("https://www.google.com/");
                     break;
             }
             if (Equals(e.Parameter, "eshop")) {

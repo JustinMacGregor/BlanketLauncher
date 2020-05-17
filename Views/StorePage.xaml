@@ -11,7 +11,6 @@
     <Grid>
         <NavigationView Name="StoreView"
                         PaneDisplayMode="Top"
-                        IsSettingsVisible="False"
                         IsBackButtonVisible="Collapsed" 
                         IsBackEnabled="False" 
                         IsPaneOpen="False"
@@ -19,6 +18,30 @@
                         ItemInvoked="NavView_ItemInvoked">
 
             <NavigationView.MenuItems>
+
+                <NavigationViewItem Tag="back">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72B;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Tag="forward">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72A;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Tag="refresh">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Tag="playstationstore" >
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/playstationstoreICON.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
 
                 <NavigationViewItem Tag="eshop" >
                     <NavigationViewItem.Icon>
@@ -29,6 +52,12 @@
                 <NavigationViewItem Tag="xboxstore" >
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/xboxstoreICON.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Tag="steam" >
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/steamICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
