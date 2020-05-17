@@ -49,10 +49,6 @@ namespace Blanket_Launcher.Views.StorePages
                     webView.Source = new System.Uri("https://www.google.com/");
                     break;
             }
-            if (Equals(e.Parameter, "eshop")) {
-                System.Uri uri = new System.Uri("https://www.nintendo.com/games/");
-                webView.Source = uri;
-            }
         }
     }
 }
