@@ -20,9 +20,15 @@
 
             <NavigationView.MenuItems>
 
-                <NavigationViewItem Tag="eshop">
+                <NavigationViewItem Tag="eshop" >
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE719;"/>
+                        <BitmapIcon UriSource="/Assets/eshopICON.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Tag="xboxstore" >
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/xboxstoreICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 

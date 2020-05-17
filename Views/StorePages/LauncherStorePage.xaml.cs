@@ -17,14 +17,42 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Blanket_Launcher.Views.StorePages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class LauncherStorePage : Page
     {
         public LauncherStorePage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e) {
+            base.OnNavigatedTo(e);
+
+            switch (e.Parameter)
+            {
+                case "eshop":
+                    webView.Source = new System.Uri("https://www.nintendo.com/games/");
+                    break;
+
+                case "steam":
+                    webView.Source = new System.Uri("https://store.steampowered.com/");
+                    break;
+
+                case "xboxstore":
+                    webView.Source = new System.Uri("https://www.xbox.com/en-CA/games?xr=shellnav");
+                    break;
+
+                case "playsationstore":
+                    webView.Source = new System.Uri("https://store.playstation.com/en-ca/home/games");
+                    break;
+
+                default:
+                    webView.Source = new System.Uri("");
+                    break;
+            }
+            if (Equals(e.Parameter, "eshop")) {
+                System.Uri uri = new System.Uri("https://www.nintendo.com/games/");
+                webView.Source = uri;
+            }
         }
     }
 }

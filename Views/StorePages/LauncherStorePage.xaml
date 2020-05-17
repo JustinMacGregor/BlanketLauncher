@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <WebView Source="https://www.nintendo.com/games/" ></WebView>
+        <WebView Name="webView"></WebView>
 
     </Grid>
 </Page>
