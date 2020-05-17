@@ -25,7 +25,7 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="games" IsSelected="True">
+                <NavigationViewItem Tag="games">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                     </NavigationViewItem.Icon>

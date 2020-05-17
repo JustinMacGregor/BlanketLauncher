@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="691,404,0,0" Text="launchers" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

@@ -9,6 +9,32 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <NavigationView Name="StoreView"
+                        PaneDisplayMode="Top"
+                        IsSettingsVisible="False"
+                        IsBackButtonVisible="Collapsed" 
+                        IsBackEnabled="False" 
+                        IsPaneOpen="False"
+                        IsPaneToggleButtonVisible="False"
+                        ItemInvoked="NavView_ItemInvoked">
 
+            <NavigationView.MenuItems>
+
+                <NavigationViewItem Tag="eshop">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE719;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="ContentFrame" Margin="24">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
     </Grid>
 </Page>

@@ -1,5 +1,4 @@
-﻿using Blanket_Launcher.Views.StorePages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,29 +15,16 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Blanket_Launcher
+namespace Blanket_Launcher.Views.StorePages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class StorePage : Page
+    public sealed partial class LauncherStorePage : Page
     {
-        public StorePage()
+        public LauncherStorePage()
         {
             this.InitializeComponent();
-        }
-
-
-        //dynamically add/remove clients that exist within the system
-
-        private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
-        {
-                switch (args.InvokedItemContainer.Tag)
-                {
-                    case "eshop":
-                        ContentFrame.Navigate(typeof(LauncherStorePage));
-                        break;
-                }
         }
     }
 }
