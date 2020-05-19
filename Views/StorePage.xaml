@@ -15,7 +15,8 @@
                         IsBackEnabled="False" 
                         IsPaneOpen="False"
                         IsPaneToggleButtonVisible="False"
-                        ItemInvoked="NavView_ItemInvoked">
+                        ItemInvoked="NavView_ItemInvoked"
+                        IsSettingsVisible="False">
 
             <NavigationView.MenuItems>
 

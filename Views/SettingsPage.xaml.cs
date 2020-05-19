@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Blanket_Launcher
 {
     public sealed partial class SettingsPage : Page
@@ -22,6 +20,7 @@ namespace Blanket_Launcher
         public SettingsPage()
         {
             this.InitializeComponent();
+            // TO-DO: If store tabs are visible in StorePage.xaml, turn on the toggles.
         }
     }
 }

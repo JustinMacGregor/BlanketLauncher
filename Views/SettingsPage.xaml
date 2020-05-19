@@ -9,6 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="691,404,0,0" Text="Settings" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel Name="stackPanel" Orientation="Vertical" Margin="15,15,0,0">
+            <TextBlock Text="Stores" FontSize="48"></TextBlock>
+            <ToggleSwitch Name="eshop" Header="eShop" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="playstationstore" Header="Playstation Store" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="xboxstore" Header="Xbox Store" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="origin" Header="Origin" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="battlenet" Header="Battlenet" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="steam" Header="Steam" Margin="0,10,0,0"></ToggleSwitch>
+        </StackPanel>
     </Grid>
 </Page>

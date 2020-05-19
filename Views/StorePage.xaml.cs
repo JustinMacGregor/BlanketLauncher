@@ -1,5 +1,4 @@
-﻿using Blanket_Launcher.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Windows.ApplicationModel.DataTransfer;
@@ -16,21 +15,6 @@ namespace Blanket_Launcher
         }
 
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args) {
-
-            if (args.IsSettingsInvoked)
-            {
-                BackButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                ForwardButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                RefreshButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                ContentFrame.Navigate(typeof(StoreSettingsPage));
-            }
-
-            else
-            {
-                BackButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                ForwardButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                RefreshButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
                 switch (args.InvokedItemContainer.Tag)
                 {
                     case "back":
@@ -77,7 +61,6 @@ namespace Blanket_Launcher
                         webView.Navigate(new System.Uri("https://www.google.com/"));
                         break;
                 }
-            }
         }
 
         private void checkIfSource(WebView sender, WebViewDOMContentLoadedEventArgs args)
