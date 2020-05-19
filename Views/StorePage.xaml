@@ -61,6 +61,18 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
+                <NavigationViewItem Tag="battlenet" >
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/battlenetICON.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Tag="origin" >
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/originICON.png"></BitmapIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blanket_Launcher.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Windows.ApplicationModel.DataTransfer;
@@ -10,16 +11,17 @@ namespace Blanket_Launcher
 
     public sealed partial class StorePage : Page {
 
-        string eshop = "https://www.nintendo.com/games/";
-        string steam = "https://store.steampowered.com/";
-        string xboxstore = "https://www.xbox.com/en-CA/games?xr=shellnav";
-        string playstationstore = "https://store.playstation.com/en-ca/home/games";
-
         public StorePage() {
             this.InitializeComponent();
         }
 
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args) {
+
+            if (args.IsSettingsInvoked)
+            {
+                ContentFrame.Navigate(typeof(StoreSettingsPage));
+            }
+
 
              switch (args.InvokedItemContainer.Tag)
              {
@@ -38,21 +40,29 @@ namespace Blanket_Launcher
                 case "eshop":
                     // TO-DO: To completely squash the back button bug (clicking it more than once will go to another store page)
                     // Find a way to either 1. clear the history every time a new store is navigated to
-                    //                      2. create a new instance of webview to reset the history
+                    //                      2. create a new instance of webview to reset the history (more expensive)
                     // then, if webView.CanGoBack() is false, hide the back button
-                    webView.Navigate(new System.Uri(eshop));
+                    webView.Navigate(new System.Uri("https://www.nintendo.com/games/"));
                     break;
 
                 case "steam":
-                    webView.Navigate(new System.Uri(steam));
+                    webView.Navigate(new System.Uri("https://store.steampowered.com/"));
                     break;
 
                 case "xboxstore":
-                    webView.Navigate(new System.Uri(xboxstore));
+                    webView.Navigate(new System.Uri("https://www.xbox.com/en-CA/games?xr=shellnav"));
                     break;
 
                 case "playstationstore":
-                    webView.Navigate(new System.Uri(playstationstore));
+                    webView.Navigate(new System.Uri("https://store.playstation.com/en-ca/home/games"));
+                    break;
+
+                case "battlenet":
+                    webView.Navigate(new System.Uri("https://us.shop.battle.net/en-us"));
+                    break;
+
+                case "origin":
+                    webView.Navigate(new System.Uri("https://www.origin.com/can/en-us/store"));
                     break;
 
                 default:
@@ -64,9 +74,11 @@ namespace Blanket_Launcher
         private void checkIfSource(WebView sender, WebViewDOMContentLoadedEventArgs args)
         {
             var sites = new List<string>() { "https://www.nintendo.com/games/",
-                                         "https://store.steampowered.com/",
-                                         "https://www.xbox.com/en-CA/games?xr=shellnav",
-                                         "https://store.playstation.com/en-ca/home/games"};
+                                             "https://store.steampowered.com/",
+                                             "https://www.xbox.com/en-CA/games?xr=shellnav",
+                                             "https://store.playstation.com/en-ca/home/games",
+                                             "https://us.shop.battle.net/en-us",
+                                             "https://www.origin.com/can/en-us/store"};
 
             if (sites.Contains(webView.Source.ToString()))
             {
