@@ -1,34 +1,51 @@
-﻿using Blanket_Launcher.Views.StorePages;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.System;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+﻿using Windows.UI.Xaml.Controls;
 
-namespace Blanket_Launcher {
+namespace Blanket_Launcher
+{
 
     public sealed partial class StorePage : Page {
         public StorePage() {
             this.InitializeComponent();
         }
 
-
-        //TO-DO: dynamically add/remove clients that exist within the system
-
-
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args) {
             var param = args.InvokedItemContainer.Tag;
-            ContentFrame.Navigate(typeof(LauncherStorePage), param);
+             switch (param)
+             {
+                // TO-DO: Dynamically change selected tab if GoBack() or GoForward() go to another store
+
+                case "back":
+                    if (webView.CanGoBack) { webView.GoBack(); }
+                    break;
+
+                case "forward":
+                    if (webView.CanGoForward) { webView.GoForward(); }
+                    break;
+
+                case "refresh":
+                    webView.Refresh();
+                    break;
+
+                case "eshop":
+                    webView.Navigate(new System.Uri("https://www.nintendo.com/games/"));
+                    break;
+
+                case "steam":
+                    webView.Navigate(new System.Uri("https://store.steampowered.com/"));
+                    break;
+
+                case "xboxstore":
+                    webView.Navigate(new System.Uri("https://www.xbox.com/en-CA/games?xr=shellnav"));
+                    break;
+
+                case "playstationstore":
+                    webView.Navigate(new System.Uri("https://store.playstation.com/en-ca/home/games"));
+                    break;
+
+                default:
+                    webView.Navigate(new System.Uri("https://www.google.com/"));
+                    break;
+            }
         }
     }
 }

@@ -19,25 +19,25 @@
 
             <NavigationView.MenuItems>
 
-                <NavigationViewItem Tag="back">
+                <NavigationViewItem Tag="back" SelectsOnInvoked="False">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72B;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="forward">
+                <NavigationViewItem Tag="forward" SelectsOnInvoked="False">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72A;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="refresh">
+                <NavigationViewItem Tag="refresh" SelectsOnInvoked="False">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="playstationstore" >
+                <NavigationViewItem Tag="playstationstore">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/playstationstoreICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
@@ -69,6 +69,7 @@
                         <NavigationThemeTransition/>
                     </TransitionCollection>
                 </Frame.ContentTransitions>
+                <WebView Name="webView" CacheMode="BitmapCache"></WebView>
             </Frame>
         </NavigationView>
     </Grid>
