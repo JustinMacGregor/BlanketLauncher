@@ -25,13 +25,13 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="forward" SelectsOnInvoked="False">
+                <NavigationViewItem Name="ForwardButton" Tag="forward" SelectsOnInvoked="False">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72A;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="refresh" SelectsOnInvoked="False">
+                <NavigationViewItem Name="RefreshButton" Tag="refresh" SelectsOnInvoked="False">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
                     </NavigationViewItem.Icon>

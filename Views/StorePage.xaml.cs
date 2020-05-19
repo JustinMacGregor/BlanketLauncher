@@ -19,56 +19,65 @@ namespace Blanket_Launcher
 
             if (args.IsSettingsInvoked)
             {
+                BackButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                ForwardButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                RefreshButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 ContentFrame.Navigate(typeof(StoreSettingsPage));
             }
 
+            else
+            {
+                BackButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                ForwardButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                RefreshButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
-             switch (args.InvokedItemContainer.Tag)
-             {
-                case "back":
-                    if (webView.CanGoBack) { webView.GoBack(); }
-                    break;
+                switch (args.InvokedItemContainer.Tag)
+                {
+                    case "back":
+                        if (webView.CanGoBack) { webView.GoBack(); }
+                        break;
 
-                case "forward":
-                    if (webView.CanGoForward) { webView.GoForward(); }
-                    break;
+                    case "forward":
+                        if (webView.CanGoForward) { webView.GoForward(); }
+                        break;
 
-                case "refresh":
-                    webView.Refresh();
-                    break;
+                    case "refresh":
+                        webView.Refresh();
+                        break;
 
-                case "eshop":
-                    // TO-DO: To completely squash the back button bug (clicking it more than once will go to another store page)
-                    // Find a way to either 1. clear the history every time a new store is navigated to
-                    //                      2. create a new instance of webview to reset the history (more expensive)
-                    // then, if webView.CanGoBack() is false, hide the back button
-                    webView.Navigate(new System.Uri("https://www.nintendo.com/games/"));
-                    break;
+                    case "eshop":
+                        // TO-DO: To completely squash the back button bug (clicking it more than once will go to another store page)
+                        // Find a way to either 1. clear the history every time a new store is navigated to
+                        //                      2. create a new instance of webview to reset the history (more expensive)
+                        // then, if webView.CanGoBack() is false, hide the back button
+                        webView.Navigate(new System.Uri("https://www.nintendo.com/games/"));
+                        break;
 
-                case "steam":
-                    webView.Navigate(new System.Uri("https://store.steampowered.com/"));
-                    break;
+                    case "steam":
+                        webView.Navigate(new System.Uri("https://store.steampowered.com/"));
+                        break;
 
-                case "xboxstore":
-                    webView.Navigate(new System.Uri("https://www.xbox.com/en-CA/games?xr=shellnav"));
-                    break;
+                    case "xboxstore":
+                        webView.Navigate(new System.Uri("https://www.xbox.com/en-CA/games?xr=shellnav"));
+                        break;
 
-                case "playstationstore":
-                    webView.Navigate(new System.Uri("https://store.playstation.com/en-ca/home/games"));
-                    break;
+                    case "playstationstore":
+                        webView.Navigate(new System.Uri("https://store.playstation.com/en-ca/home/games"));
+                        break;
 
-                case "battlenet":
-                    webView.Navigate(new System.Uri("https://us.shop.battle.net/en-us"));
-                    break;
+                    case "battlenet":
+                        webView.Navigate(new System.Uri("https://us.shop.battle.net/en-us"));
+                        break;
 
-                case "origin":
-                    webView.Navigate(new System.Uri("https://www.origin.com/can/en-us/store"));
-                    break;
+                    case "origin":
+                        webView.Navigate(new System.Uri("https://www.origin.com/can/en-us/store"));
+                        break;
 
-                default:
-                    webView.Navigate(new System.Uri("https://www.google.com/"));
-                    break;
-             }
+                    default:
+                        webView.Navigate(new System.Uri("https://www.google.com/"));
+                        break;
+                }
+            }
         }
 
         private void checkIfSource(WebView sender, WebViewDOMContentLoadedEventArgs args)

@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Blanket_Launcher.Views
 {
     public sealed partial class StoreSettingsPage : Page
@@ -25,6 +23,7 @@ namespace Blanket_Launcher.Views
             // TO-DO: If store tabs are visible in StorePage.xaml, turn on the toggles.
         }
 
-        // TO-DO: When toggled, turn the visibility of the tab in StorePage to Visibility.Collapsed.
+        // TO-DO: Fix bug where you cant go back to store tabs after accessing settings
+        // (maybe when another tab is clicked, the page goes to StorePage.xaml)
     }
 }
