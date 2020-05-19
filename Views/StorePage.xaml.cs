@@ -36,6 +36,10 @@ namespace Blanket_Launcher
                     break;
 
                 case "eshop":
+                    // TO-DO: To completely squash the back button bug (clicking it more than once will go to another store page)
+                    // Find a way to either 1. clear the history every time a new store is navigated to
+                    //                      2. create a new instance of webview to reset the history
+                    // then, if webView.CanGoBack() is false, hide the back button
                     webView.Navigate(new System.Uri(eshop));
                     break;
 
@@ -63,16 +67,15 @@ namespace Blanket_Launcher
                                          "https://store.steampowered.com/",
                                          "https://www.xbox.com/en-CA/games?xr=shellnav",
                                          "https://store.playstation.com/en-ca/home/games"};
-            /*if (webView.Source.Equals(eshop) || webView.Source.Equals(steam) || webView.Source.Equals(xboxstore) || webView.Source.Equals(playstationstore))*/
 
             if (sites.Contains(webView.Source.ToString()))
             {
                  BackButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             }
-             else
-             {
-                 BackButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-             }
+            else
+            {
+                BackButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
         }
     }
 }
