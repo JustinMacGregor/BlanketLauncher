@@ -16,7 +16,7 @@
                         IsPaneOpen="False"
                         IsPaneToggleButtonVisible="False"
                         ItemInvoked="NavView_ItemInvoked"
-                        IsSettingsVisible="False">
+                        IsSettingsVisible="False" FocusVisualPrimaryThickness="11,2,2,2">
 
             <NavigationView.MenuItems>
 
@@ -38,37 +38,37 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="playstationstore">
+                <NavigationViewItem Tag="playstationstore" x:FieldModifier="public">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/playstationstoreICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="eshop" >
+                <NavigationViewItem Tag="eshop" x:FieldModifier="public" Name="ESHOP">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/eshopICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="xboxstore" >
+                <NavigationViewItem Tag="xboxstore" x:FieldModifier="public">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/xboxstoreICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="steam" >
+                <NavigationViewItem Tag="steam" x:FieldModifier="public">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/steamICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="battlenet" >
+                <NavigationViewItem Tag="battlenet" x:FieldModifier="public">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/battlenetICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="origin" >
+                <NavigationViewItem Tag="origin" x:FieldModifier="public">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/originICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>

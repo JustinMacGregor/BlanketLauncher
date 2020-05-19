@@ -11,12 +11,12 @@
     <Grid>
         <StackPanel Name="stackPanel" Orientation="Vertical" Margin="15,15,0,0">
             <TextBlock Text="Stores" FontSize="48"></TextBlock>
-            <ToggleSwitch Name="eshop" Header="eShop" Margin="0,10,0,0"></ToggleSwitch>
-            <ToggleSwitch Name="playstationstore" Header="Playstation Store" Margin="0,10,0,0"></ToggleSwitch>
-            <ToggleSwitch Name="xboxstore" Header="Xbox Store" Margin="0,10,0,0"></ToggleSwitch>
-            <ToggleSwitch Name="origin" Header="Origin" Margin="0,10,0,0"></ToggleSwitch>
-            <ToggleSwitch Name="battlenet" Header="Battlenet" Margin="0,10,0,0"></ToggleSwitch>
-            <ToggleSwitch Name="steam" Header="Steam" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="eshoptoggle" Header="eShop" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="playstationstoretoggle" Header="Playstation Store" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="xboxstoretoggle" Header="Xbox Store" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="origintoggle" Header="Origin" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="battlenettoggle" Header="Battlenet" Margin="0,10,0,0"></ToggleSwitch>
+            <ToggleSwitch Name="steamtoggle" Header="Steam" Margin="0,10,0,0"></ToggleSwitch>
         </StackPanel>
     </Grid>
 </Page>
