@@ -20,7 +20,7 @@
 
             <NavigationView.MenuItems>
 
-                <NavigationViewItem Name="BackButton" Tag="back" SelectsOnInvoked="False">
+                <NavigationViewItem Name="BackButton" Tag="back" SelectsOnInvoked="False" IsDoubleTapEnabled="False">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72B;"/>
                     </NavigationViewItem.Icon>
@@ -82,7 +82,7 @@
                         <NavigationThemeTransition/>
                     </TransitionCollection>
                 </Frame.ContentTransitions>
-                <WebView Name="webView" CacheMode="BitmapCache"></WebView>
+                <WebView Name="webView" CacheMode="BitmapCache" DOMContentLoaded="DOMContentLoaded" ContentLoading="ContentLoading" NewWindowRequested="NewWindowRequested"></WebView>
             </Frame>
         </NavigationView>
     </Grid>
