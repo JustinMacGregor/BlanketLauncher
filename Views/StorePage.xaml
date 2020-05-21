@@ -38,42 +38,42 @@
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="playstationstore" x:FieldModifier="public">
+                <NavigationViewItem Tag="https://store.playstation.com/home/games" x:FieldModifier="public" Name="PLAYSTATION">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/playstationstoreICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="eshop" x:FieldModifier="public" Name="ESHOP">
+                <NavigationViewItem Tag="https://www.nintendo.com/games" x:FieldModifier="public" Name="ESHOP">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/eshopICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="xboxstore" x:FieldModifier="public">
+                <NavigationViewItem Tag="https://www.xbox.com/games?xr=shellnav" x:FieldModifier="public" Name="XBOX">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/xboxstoreICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="steam" x:FieldModifier="public">
+                <NavigationViewItem Tag="https://store.steampowered.com" x:FieldModifier="public" Name="STEAM">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/steamICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="battlenet" x:FieldModifier="public">
+                <NavigationViewItem Tag="https://shop.battle.net" x:FieldModifier="public" Name="BATTLENET">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/battlenetICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Tag="origin" x:FieldModifier="public">
+                <NavigationViewItem Tag="https://www.origin.com" x:FieldModifier="public" Name="ORIGIN">
                     <NavigationViewItem.Icon>
                         <BitmapIcon UriSource="/Assets/originICON.png"></BitmapIcon>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-
+                
             </NavigationView.MenuItems>
 
             <Frame x:Name="ContentFrame">
@@ -82,7 +82,7 @@
                         <NavigationThemeTransition/>
                     </TransitionCollection>
                 </Frame.ContentTransitions>
-                <WebView Name="webView" CacheMode="BitmapCache" DOMContentLoaded="checkIfSource"></WebView>
+                <WebView Name="webView" CacheMode="BitmapCache"></WebView>
             </Frame>
         </NavigationView>
     </Grid>

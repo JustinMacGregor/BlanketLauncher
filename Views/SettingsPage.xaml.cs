@@ -21,10 +21,15 @@ namespace Blanket_Launcher
         {
             this.InitializeComponent();
             StorePage sp = new StorePage();
+
             if (sp.ESHOP.Visibility == Windows.UI.Xaml.Visibility.Visible)
             {
                 eshoptoggle.IsOn = true;
+            } else
+            {
+                eshoptoggle.IsOn = false;
             }
+
             // For each tab in storepage.xaml
             // If the visibility is visible
             // isOn = true
