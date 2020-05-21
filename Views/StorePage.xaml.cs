@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Windows.ApplicationModel.DataTransfer;
-using Windows.Devices.AllJoyn;
-using Windows.UI.Composition;
-using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml.Controls;
 
 namespace Blanket_Launcher
 {
-
     public sealed partial class StorePage : Page {
+
+        string _currentHost = "";
 
         public StorePage() {
             this.InitializeComponent();
@@ -19,11 +14,15 @@ namespace Blanket_Launcher
                 switch (args.InvokedItemContainer.Tag)
                 {
                     case "back":
-                        if (webView.CanGoBack) { webView.GoBack(); }
+                        if (webView.CanGoBack) {
+                            webView.GoBack();
+                        }
                         break;
 
                     case "forward":
-                        if (webView.CanGoForward) { webView.GoForward(); }
+                        if (webView.CanGoForward) {
+                            webView.GoForward(); 
+                        }
                         break;
 
                     case "refresh":
@@ -31,9 +30,8 @@ namespace Blanket_Launcher
                         break;
 
                     default:
-                    // TO-DO: To completely squash the back button bug (clicking it more than once will go to another store page)
-                    // Find a way to move the cursor to another MenuItem when the domain name is different e.g. going from xbox to playstation
-                    webView.Navigate(new System.Uri(args.InvokedItemContainer.Tag.ToString()));
+                    //to fix back button bug (selecting it multiple times will bring to other store page), change the cursor if the domain changes
+                        webView.Navigate(new System.Uri(args.InvokedItemContainer.Tag.ToString()));
                         break;
                 }
         }
